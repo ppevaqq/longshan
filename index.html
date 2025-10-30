@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顺德龙山同乡会</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+            background-color: #F5F5F5;
+            color: #333333;
+        }
+        
+        .text-primary {
+            color: #C8102E;
+        }
+        
+        .bg-primary {
+            background-color: #C8102E;
+        }
+        
+        .text-secondary {
+            color: #DAA520;
+        }
+        
+        .bg-secondary {
+            background-color: #DAA520;
+        }
+        
+        .hero-slide {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="bg-primary text-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-3">
+                    <i class="fas fa-landmark text-primary text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold">顺德龙山同鄉會</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-secondary">首頁</a>
+                <a href="#about" class="hover:text-secondary">關於本會</a>
+                <a href="#news" class="hover:text-secondary">本會動態</a>
+                <a href="#membership" class="hover:text-secondary">會員專區</a>
+                <a href="#gallery" class="hover:text-secondary">龍山風采</a>
+                <a href="#contact" class="hover:text-secondary">聯繫我們</a>
+            </nav>
+            
+            <button id="mobileMenuButton" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobileMenu" class="mobile-menu bg-primary md:hidden">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="hover:text-secondary py-2">首頁</a>
+                <a href="#about" class="hover:text-secondary py-2">關於本會</a>
+                <a href="#news" class="hover:text-secondary py-2">本會動態</a>
+                <a href="#membership" class="hover:text-secondary py-2">會員專區</a>
+                <a href="#gallery" class="hover:text-secondary py-2">龍山風采</a>
+                <a href="#contact" class="hover:text-secondary py-2">聯繫我們</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主视觉横幅 -->
+    <section id="home" class="relative">
+        <div class="hero-slide" style="background-image: url('https://s.coze.cn/image/F7cPpHU4ZU0/')">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">凝聚龍山情，共築中國夢</h2>
+                    <p class="text-xl">全球龍山鄉親的網上家園</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会长献辞 -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">會長獻辭</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <img src="https://s.coze.cn/image/yf5J8XJQNj4/" alt="會長照片" class="rounded-lg shadow-lg w-full">
+                </div>
+                
+                <div class="md:w-2/3 md:pl-8">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">尊敬的各位鄉親：</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        歡迎訪問順德龍山同鄉會官方網站！作為全球龍山鄉親的橋樑和紐帶，本會始終秉承"團結鄉親、服務鄉親、造福鄉親"的宗旨，致力於傳承龍山文化，促進家鄉發展。
+                    </p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        近年來，在各位鄉親的大力支持下，同鄉會各項工作取得了長足進步。我們成功舉辦了多場文化交流活動，建立了完善的會員服務體系，並積極參與家鄉建設。這些成績的取得，離不開每一位鄉親的熱心參與和無私奉獻。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        展望未來，我們將繼續創新服務方式，拓展服務領域，為全球龍山鄉親搭建更廣闊的交流平台。衷心希望各位鄉親一如既往地關心支持同鄉會工作，共同為傳承龍山文化、促進家鄉發展貢獻力量！
+                    </p>
+                    <p class="text-primary font-semibold mt-6">順德龍山同鄉會會長 張大山</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 本会动态 -->
+    <section id="news" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">本會動態</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 新闻卡片1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://s.coze.cn/image/RktqwR6JpJo/')"></div>
+                    <div class="p-6">
+                        <div class="text-secondary text-sm mb-2">2025-02-10</div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">2025年新春團拜活動圓滿舉行</h3>
+                        <p class="text-gray-600 mb-4">2月8日，同鄉會在龍山文化中心舉辦新春團拜活動，200餘位鄉親歡聚一堂，共慶新春佳節...</p>
+                        <a href="#" class="text-primary font-medium hover:underline">閱讀更多</a>
+                    </div>
+                </div>
+                
+                <!-- 新闻卡片2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://s.coze.cn/image/X0zhJcQ5QHI/')"></div>
+                    <div class="p-6">
+                        <div class="text-secondary text-sm mb-2">2025-01-15</div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">同鄉會向龍山小學捐贈教學設備</h3>
+                        <p class="text-gray-600 mb-4">1月12日，同鄉會向龍山小學捐贈價值50萬元的教學設備，助力家鄉教育事業發展...</p>
+                        <a href="#" class="text-primary font-medium hover:underline">閱讀更多</a>
+                    </div>
+                </div>
+                
+                <!-- 新闻卡片3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('')"></div>
+                    <div class="p-6">
+                        <div class="text-secondary text-sm mb-2">2024-12-20</div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">2024年度會員大會順利召開</h3>
+                        <p class="text-gray-600 mb-4">12月18日，同鄉會召開2024年度會員大會，審議通過年度工作報告和財務報告...</p>
+                        <a href="#" class="text-primary font-medium hover:underline">閱讀更多</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition">查看更多動態</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 龙山风采 -->
+    <section id="gallery" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">龍山風采</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/rJrnTQvv2kQ/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/_qsH7RmyM2s/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/KSFjZrdZ2x8/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/PNa-Kdu5xWM/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/mcZPeWcBeq0/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/jr0oa58bcGA/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/jt6EF7qB2Jc/')"></div>
+                <div class="gallery-item rounded-lg" style="background-image: url('https://s.coze.cn/image/vVJI8hC6xwU/')"></div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition">瀏覽更多風采</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于本会 -->
+    <section id="about" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">關於本會</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">本會簡介</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        順德龍山同鄉會成立於1985年，是由龍山籍鄉親自發組成的非營利性社會團體。經過近40年的發展，現已成為聯繫全球龍山鄉親的重要紐帶。
+                    </p>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        本會以"團結鄉親、服務鄉親、造福鄉親"為宗旨，致力於傳承龍山文化，促進家鄉發展，為鄉親提供交流合作平台。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        目前，同鄉會在全球設有12個分會，會員人數超過5000人，每年舉辦各類文化、聯誼、公益活動30餘場。
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">組織架構</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <h4 class="text-lg font-medium text-primary mb-2">理事會</h4>
+                            <p class="text-gray-600">會長：張大山</p>
+                            <p class="text-gray-600">副會長：李小明、陳大華、黃小紅</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-medium text-primary mb-2">監事會</h4>
+                            <p class="text-gray-600">監事長：王大明</p>
+                            <p class="text-gray-600">監事：趙小剛、劉小麗</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-primary mb-2">各委員會</h4>
+                            <p class="text-gray-600">文化委員會、聯誼委員會、公益委員會、青年委員會</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会员专区 -->
+    <section id="membership" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-8 text-center">會員專區</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">入會指南</h3>
+                    <p class="text-gray-700 mb-4">歡迎符合以下條件的鄉親加入本會：</p>
+                    <ul class="list-disc pl-5 text-gray-700 mb-4 space-y-2">
+                        <li>年滿18周歲</li>
+                        <li>本人或直系親屬為龍山籍</li>
+                        <li>認同本會章程</li>
+                    </ul>
+                    <p class="text-gray-700 mb-4">入會流程：</p>
+                    <ol class="list-decimal pl-5 text-gray-700 mb-6 space-y-2">
+                        <li>填寫入會申請表</li>
+                        <li>提交身份證明及戶籍證明</li>
+                        <li>繳納會費</li>
+                        <li>理事會審核通過</li>
+                    </ol>
+                    <a href="#" class="inline-block bg-primary text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition">下載申請表格</a>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">會員福利</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">活動優先參與權</h4>
+                                <p class="text-gray-600 text-sm">可優先報名參加同鄉會舉辦的各類文化、聯誼活動</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
+                                <i class="fas fa-percent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">商業折扣</h4>
+                                <p class="text-gray-600 text-sm">享受會員企業提供的專屬折扣和優惠</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">法律諮詢服務</h4>
+                                <p class="text-gray-600 text-sm">免費享受專業法律顧問提供的基礎法律諮詢</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-secondary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-3">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">文化資源</h4>
+                                <p class="text-gray-600 text-sm">免費獲取龍山文化研究資料和出版物</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-12 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">聯繫我們</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">聯繫資訊</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-secondary"></i>
+                            <p>廣東省佛山市順德區龍山鎮同鄉路88號龍山同鄉會大廈</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-secondary"></i>
+                            <p>+86 757 8888 8888</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-fax mr-3 text-secondary"></i>
+                            <p>+86 757 8888 8889</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-secondary"></i>
+                            <p>info@longshantongxianghui.org</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-secondary"></i>
+                            <p>週一至週五 9:00-17:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">微信公眾號</h3>
+                    <div class="bg-white p-4 rounded-lg inline-block">
+                        <img src="https://s.coze.cn/image/K0YYgw2FiNo/" alt="微信公眾號" class="w-32 h-32">
+                    </div>
+                    <p class="mt-3">掃描二維碼關注我們</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">在線留言</h3>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="您的姓名" class="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="電子郵箱" class="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div class="mb-4">
+                            <input type="tel" placeholder="電話號碼" class="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="您的留言" rows="3" class="w-full px-4 py-2 rounded-md bg-white bg-opacity-20 border border-white border-opacity-30 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-secondary text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>© 2025 順德龍山同鄉會 版權所有</p>
+                    <p class="text-sm text-gray-400 mt-1">頁面內容均由 AI 生成，僅供參考</p>
+                </div>
+                <div>
+                    <a href="https://space.coze.cn" class="text-gray-300 hover:text-white transition">created by coze space</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 如果是移动端菜单，点击后关闭菜单
+                    if (document.getElementById('mobileMenu').classList.contains('active')) {
+                        document.getElementById('mobileMenu').classList.remove('active');
+                        document.getElementById('mobileMenuButton').querySelector('i').classList.remove('fa-times');
+                        document.getElementById('mobileMenuButton').querySelector('i').classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+        
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
