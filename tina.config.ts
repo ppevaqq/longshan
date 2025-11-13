@@ -2,8 +2,8 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main",
-  clientId: "YOUR_CLIENT_ID", // Replace with your Tina Cloud client ID
-  token: "YOUR_TOKEN", // Replace with your Tina Cloud token
+  clientId: "c0fa7027-236a-42fd-9a51-e1300e5f991a", // Replace with your Tina Cloud client ID
+  token: "95a63742fe1c172c1a36e3aec3df35d17417bea5", // Replace with your Tina Cloud token
   build: {
     outputDir: "admin",
     publicDir: "public",
